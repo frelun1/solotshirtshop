@@ -1,7 +1,5 @@
 <template>
-  <div class="order">
-    <h1>Order page</h1>
-  </div>
+ 
 </template>
 
 <script>
@@ -9,7 +7,7 @@
 import Order from '@/components/Order.vue'
 
 export default {
-  name: "order",
+  name: 'order',
   components: {
     Order
   }
