@@ -6,6 +6,7 @@ import Cart from '@/components/Cart.vue'
 // betalningsmetod(String), nummer till kunden(int), leveransadress(till kunden(namn, efternam, adress, postnummer, land) och eventuellt till utlämningsställe om fraktsättet är Utlämningsställe)
 // 
 
+
 describe('Cart', () => {
     test('is a Vue instance', () => {
         const wrapper = mount(Cart)
@@ -18,6 +19,9 @@ describe('Cart', () => {
         expect(wrapper.text()).toContain('Your orderinformation will be sent to your email')
     })
 })
+
+let expectedData={CName:'Ben',CLastName:'Ingvarsson',CAdress:{street:'Storgatan 2b',zip:'123 45',city:'Testra',Country:'Sweden'},Payment:'credit card',Price:'250kr',OrderNumber:'123456789',OrderDate:'2019-10/03',Delivery:'Utlämningsställe',
+CNumber:'0566558877',UName:'ICA Kvantum Emporia',UAdress:{street:'Emporia, Hyllie stationsväg 22',zip:'215 32',city:'Malmö',Country:'sweden'},ShirtDesc:'This is a T-Shirt'}
 describe('Order', () =>{
     test('is a Vue instance', () => {
         const wrapper = mount(Order)
@@ -26,16 +30,16 @@ describe('Order', () =>{
     test('sending orderinformation', () => {
         const wrapper = mount(Order)
         wrapper.vm.placeOrder()
-        expect(wrapper.text()).toContain(CName,CLastName,CAdress,CPostalcode, CCountry)
-        expect(wrapper.text()).toContain(t-ShirtDesc)
-        expect(wrapper.text()).toContain(Payment)
-        expect(wrapper.text()).toContain(Price)
-        expect(wrapper.text()).toContain(OrderNumber)
-        expect(wrapper.text()).toContain(OrderDate)
-        expect(wrapper.text()).toContain(Delivery)
-        expect(wrapper.text()).toContain(CNumber)
-        if(Delivery == 'Utlämningsställe'){
-            expect(wrapper.text()).toContain(UName, UAdress, UPostalcode)
+        expect(wrapper.text()).toContain(expectedData.CName, expectedData.CLastName, expectedData.CAdress)
+        expect(wrapper.text()).toContain(expectedData.ShirtDesc)
+        expect(wrapper.text()).toContain(expectedData.Payment)
+        expect(wrapper.text()).toContain(expectedData.Price)
+        expect(wrapper.text()).toContain(expectedData.OrderNumber)
+        expect(wrapper.text()).toContain(expectedData.OrderDate)
+        expect(wrapper.text()).toContain(expectedData.Delivery)
+        expect(wrapper.text()).toContain(expectedData.CNumber)
+        if(expectedData.Delivery == 'Utlämningsställe'){
+            expect(wrapper.text()).toContain(expectedData.UName, expectedData.UAdress)
         }
     })
     test('se order history', () => {
@@ -46,6 +50,6 @@ describe('Order', () =>{
     test('my T-Shirts', () => {
         const wrapper = mount(Order)
         wrapper.vm.seOldOrder()
-        expect()
+        expect(wrapper.text()).toContain('Order 123456789')
     })
 })
