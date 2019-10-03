@@ -1,4 +1,8 @@
 module.exports = {
+
+  transform: {
+    "\\.js$": "<rootDir>/node_modules/babel-jest"
+  },
   moduleFileExtensions: [
     'js',
     'jsx',
@@ -6,9 +10,11 @@ module.exports = {
     'vue'
   ],
   transform: {
+    "\\.js$": "<rootDir>/node_modules/babel-jest",
     '^.+\\.vue$': 'vue-jest',
     '.+\\.(css|styl|less|sass|scss|svg|png|jpg|ttf|woff|woff2)$': 'jest-transform-stub',
     '^.+\\.jsx?$': 'babel-jest'
+    
   },
   transformIgnorePatterns: [
     '/node_modules/'
