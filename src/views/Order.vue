@@ -1,7 +1,6 @@
 <template>
   <div class="order">
-    <img alt="Vue logo" src="../assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <h1>Order page</h1>
   </div>
 </template>
 
@@ -10,9 +9,9 @@
 import Order from '@/components/Order.vue'
 
 export default {
-  name: 'order',
+  name: "order",
   components: {
     Order
   }
-}
+};
 </script>
