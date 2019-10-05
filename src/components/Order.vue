@@ -10,9 +10,9 @@ export default {
   data() {
     return {
       orderData: {
-        firstName: "",
+        firstName: "Ben",
 
-        tShirt: {}
+        tShirt: 'This is a T-Shirt'
       },
 
       setFirstName(name) {
