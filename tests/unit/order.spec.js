@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils'
 import Order from '@/components/Order.vue'
+import OrderHistory from '@/components/Orderhistory.vue'
 /*import Cart from '@/components/Cart.vue'
 
 // Orderbekräftelsen som kunde skall få ska inehålla vilken/vilka t-shirt/s som kunden beställt (i form av en beskrivande text(String)), pris (i kronor(Float)), ordernummer(Int), Beställningsdatum(Date),
@@ -41,14 +42,21 @@ describe('Order', () =>{
             expect(wrapper.text()).toContain(expectedData.UName, expectedData.UAdress)
         }*/
     })
-    /*test('se order history', () => {
-        const wrapper = mount(Order)
-        wrapper.vm.seOrderHistory()
-        expect(wrapper.text()).toContain('Your order history')
+})
+
+describe('OrderHistory', () => {
+    test('is a Vue instance', () => {
+        const wrapper = mount(OrderHistory)
+        expect(wrapper.isVueInstance()).toBeTruthy()
+      })
+    test('se order history', () => {
+        const wrapper = mount(OrderHistory)
+        expect(wrapper.vm.orderHistory.First.OrderNumber).toEqual(expectedData.OrderNumber)
     })
     test('my T-Shirts', () => {
-        const wrapper = mount(Order)
-        wrapper.vm.seOldOrder()
-        expect(wrapper.text()).toContain('Order 123456789')
-    })*/
+        const wrapper = mount(OrderHistory)
+        wrapper.vm.seOldOrder(expectedData.OrderNumber)
+        expect(wrapper.vm.orderHistory.First.OrderNumber).toEqual(expectedData.OrderNumber)
+    })
 })
+    
