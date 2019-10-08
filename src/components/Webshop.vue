@@ -17,7 +17,9 @@
           <footer class="card-footer">
             <p class="card-footer-item">
               <span>
-                <a class="button is-link">Skapa din egen</a>
+                <router-link :to="{ name: 'design', params: {designId: 'model-1' } }">
+                  <button class="button is-link">Skapa din egen</button>
+                </router-link>
               </span>
             </p>
           </footer>
@@ -38,7 +40,9 @@
           <footer class="card-footer">
             <p class="card-footer-item">
               <span>
-                <a class="button is-link">Skapa din egen</a>
+                <router-link :to="{ name: 'design', params: {designId: 'model-2' } }">
+                  <button class="button is-link">Skapa din egen</button>
+                </router-link>
               </span>
             </p>
           </footer>
@@ -59,14 +63,16 @@
           <footer class="card-footer">
             <p class="card-footer-item">
               <span>
-                <a class="button is-link">Skapa din egen</a>
+                <router-link :to="{ name: 'design', params: {designId: 'model-3' } }">
+                  <button class="button is-link">Skapa din egen</button>
+                </router-link>
               </span>
             </p>
           </footer>
         </div>
       </div>
     </div>
-        <div class="columns">
+    <div class="columns">
       <div class="column">
         <div class="card">
           <header class="card-header">
@@ -82,7 +88,7 @@
           <footer class="card-footer">
             <p class="card-footer-item">
               <span>
-                <a class="button is-link">Skapa din egen</a>
+                <router-link :to="{ name: 'design', params: {designId: 'model-4' } }"><button class="button is-link">Skapa din egen</button></router-link>
               </span>
             </p>
           </footer>
@@ -103,7 +109,7 @@
           <footer class="card-footer">
             <p class="card-footer-item">
               <span>
-                <a class="button is-link">Skapa din egen</a>
+                <router-link :to="{ name: 'design', params: {designId: 'model-5' } }"><button class="button is-link">Skapa din egen</button></router-link>
               </span>
             </p>
           </footer>
@@ -124,7 +130,7 @@
           <footer class="card-footer">
             <p class="card-footer-item">
               <span>
-                <a class="button is-link">Skapa din egen</a>
+                <router-link :to="{ name: 'design', params: {designId: 'model-6' } }"><button class="button is-link">Skapa din egen</button></router-link>
               </span>
             </p>
           </footer>
