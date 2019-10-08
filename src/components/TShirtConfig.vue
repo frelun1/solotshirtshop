@@ -10,11 +10,15 @@ export default {
   data() {
     return {
       tShirt: {
-        size: ''
+        size: '',
+        farg: 'Vit'
       },
 
       setSize(size) {
         this.tShirt.size = size;
+      },
+      setFarg(farg){
+        this.tShirt.farg = farg;
       }
     };
   }
