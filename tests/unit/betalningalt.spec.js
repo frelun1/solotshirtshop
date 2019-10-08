@@ -10,34 +10,38 @@ let expectedData={ FBetAlt: 'Faktura', FFirstName: 'Clas', FLastName: 'Glas', FA
 CBetAlt: 'CreditCard', CFirstnName: 'Kalle', CLastName: 'Galén', CAdress: 'Mångatan 5', CCardnumber: '1234 4567 8901 2345', CCardDate: '30/12', CCardCCV: '999', DiscountCode: 'Free123' }
 
 describe('Faktura', () =>{
-    test('is a Vue instance', () => {
+    test('laddar komponent', () => {
         const wrapper = mount(BetAlt)
         expect(wrapper.isVueInstance()).toBeTruthy()
       })
-      test('sending betal info faktura', () => {
+      test('kollar av faktura info', () => {
         const wrapper = mount(BetAlt)
-        expect(wrapper.vm.fakturadata.faktura).toBeTruthy(expectedData.FBetAlt)
-        expect(wrapper.vm.fakturadata.firstName).toEqual(expectedData.FFirstName)
-        expect(wrapper.vm.fakturadata.lastname).toEqual(expectedData.FLastName)
-        expect(wrapper.vm.fakturadata.adress).toEqual(expectedData.FAdress)
+        expect(wrapper.vm.fakturaData.faktura).toBeTruthy(expectedData.FBetAlt)
+        expect(wrapper.vm.fakturaData.firstName).toEqual(expectedData.FFirstName)
+        expect(wrapper.vm.fakturaData.lastname).toEqual(expectedData.FLastName)
+        expect(wrapper.vm.fakturaData.adress).toEqual(expectedData.FAdress)
+      })
+      test('kollar av rabattkod', () => {
         expect(wrapper.vm.rabatt).toEqual(expectedData.DiscountCode)
     })
 })
 
 describe('Credic Card', () =>{
-    test('is a Vue instance', () => {
+    test('laddar komponent', () => {
         const wrapper = mount(BetAlt)
         expect(wrapper.isVueInstance()).toBeTruthy()
       })
-      test('sending betal info credit card', () => {
+      test('kollar av kreditkorts info', () => {
         const wrapper = mount(BetAlt)
-        expect(wrapper.vm.fakturadata.creditcard).toBeTruthy(expectedData.CBetAlt)
-        expect(wrapper.vm.kortdata.firstName).toEqual(expectedData.CFirstnName)
-        expect(wrapper.vm.kortdata.lastname).toEqual(expectedData.CLastName)
-        expect(wrapper.vm.kortdata.adress).toEqual(expectedData.CAdress)
-        expect(wrapper.vm.kortdata.cardnumber).toEqual(expectedData.CCardnumber)
-        expect(wrapper.vm.kortdata.carddate).toEqual(expectedData.CCardDate)
-        expect(wrapper.vm.kortdata.cardccv).toEqual(expectedData.CCardCCV)
+        expect(wrapper.vm.fakturaData.creditcard).toBeTruthy(expectedData.CBetAlt)
+        expect(wrapper.vm.kortData.firstName).toEqual(expectedData.CFirstnName)
+        expect(wrapper.vm.kortData.lastname).toEqual(expectedData.CLastName)
+        expect(wrapper.vm.kortData.adress).toEqual(expectedData.CAdress)
+        expect(wrapper.vm.kortData.cardnumber).toEqual(expectedData.CCardnumber)
+        expect(wrapper.vm.kortData.carddate).toEqual(expectedData.CCardDate)
+        expect(wrapper.vm.kortData.cardccv).toEqual(expectedData.CCardCCV)
+      })
+      test('kollar av rabattkod', () => {
         expect(wrapper.vm.rabatt).toEqual(expectedData.DiscountCode)
     })
 })
