@@ -1,6 +1,5 @@
 <template>
   <div class="BetAlt">
-    <h1>test</h1>
   </div>
 </template>
 

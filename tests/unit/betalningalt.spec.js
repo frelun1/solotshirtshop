@@ -7,8 +7,8 @@ import Rabatt from '@/components/Rabatt.vue'
 //Samt rabattkod för rabatt
 
 
-let expectedData={ FBetAlt: 'Faktura', FFirstName: 'Clas', FLastName: 'Glas', FAdress: {Street: 'Solgatan 10', zip: '22222', Town: 'Lund', Country: 'Sweden'}, 
-CBetAlt: 'CreditCard', CFirstnName: 'Kalle', CLastName: 'Galén', CAdress: 'Mångatan 5', CCardnumber: '1234 4567 8901 2345', CCardDate: '30/12', CCardCCV: '999', DiscountCode: 'Free123' }
+let expectedData={ FBetAlt: 'Faktura', FFirstName: 'Clas', FLastName: 'Glas', FAdress: {Street: 'Solgatan 10', Zip: '22222', Town: 'Lund', Country: 'Sweden'}, 
+CBetAlt: 'CreditCard', CFirstnName: 'Kalle', CLastName: 'Galén', CAdress: 'Mångatan 5', CCardNumber: '1234 4567 8901 2345', CCardDate: '30/12', CCardCCV: '999', DiscountCode: 'Free123' }
 
 describe('Faktura', () =>{
     test('laddar komponent', () => {
@@ -17,10 +17,14 @@ describe('Faktura', () =>{
       })
       test('kollar av faktura info', () => {
         const wrapper = mount(BetAlt)
+        wrapper.vm.setFFirstName(expectedData.FFirstName)
+        expect(wrapper.vm.fakturaData.FFirstName).toEqual(expectedData.FFirstName)
+
+        wrapper.vm.setFAdress(expectedData.FAdress)
+        expect(wrapper.vm.fakturaData.FAdress).toEqual(expectedData.FAdress)
+
         expect(wrapper.vm.fakturaData.faktura).toEqual(expectedData.FBetAlt)
-        expect(wrapper.vm.fakturaData.firstName).toEqual(expectedData.FFirstName)
-        expect(wrapper.vm.fakturaData.lastname).toEqual(expectedData.FLastName)
-        expect(wrapper.vm.fakturaData.adress).toEqual(expectedData.FAdress)
+        expect(wrapper.vm.fakturaData.lastName).toEqual(expectedData.FLastName)
       })
       test('kollar av rabattkod', () => {
         const wrapper = mount(Rabatt)
@@ -37,11 +41,11 @@ describe('Credic Card', () =>{
         const wrapper = mount(BetAlt)
         expect(wrapper.vm.fakturaData.creditcard).toEqual(expectedData.CBetAlt)
         expect(wrapper.vm.kortData.firstName).toEqual(expectedData.CFirstnName)
-        expect(wrapper.vm.kortData.lastname).toEqual(expectedData.CLastName)
+        expect(wrapper.vm.kortData.lastName).toEqual(expectedData.CLastName)
         expect(wrapper.vm.kortData.adress).toEqual(expectedData.CAdress)
-        expect(wrapper.vm.kortData.cardnumber).toEqual(expectedData.CCardnumber)
-        expect(wrapper.vm.kortData.carddate).toEqual(expectedData.CCardDate)
-        expect(wrapper.vm.kortData.cardccv).toEqual(expectedData.CCardCCV)
+        expect(wrapper.vm.kortData.cardNumber).toEqual(expectedData.CCardNumber)
+        expect(wrapper.vm.kortData.cardDate).toEqual(expectedData.CCardDate)
+        expect(wrapper.vm.kortData.cardCCV).toEqual(expectedData.CCardCCV)
       })
       test('kollar av rabattkod', () => {
         const wrapper = mount(Rabatt)
