@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils'
 import BetAlt from '@/components/BetAlt.vue'
+import Rabatt from '@/components/Rabatt.vue'
 
 
 //Det skall finnas faktura- och kortbetalnings altenativ. När man väljer ett av altenativen kan man skriva in informationen som behövs för att slutföra betalningen för respektive betalnings altenativ
@@ -16,12 +17,13 @@ describe('Faktura', () =>{
       })
       test('kollar av faktura info', () => {
         const wrapper = mount(BetAlt)
-        expect(wrapper.vm.fakturaData.faktura).toBeTruthy(expectedData.FBetAlt)
+        expect(wrapper.vm.fakturaData.faktura).toEqual(expectedData.FBetAlt)
         expect(wrapper.vm.fakturaData.firstName).toEqual(expectedData.FFirstName)
         expect(wrapper.vm.fakturaData.lastname).toEqual(expectedData.FLastName)
         expect(wrapper.vm.fakturaData.adress).toEqual(expectedData.FAdress)
       })
       test('kollar av rabattkod', () => {
+        const wrapper = mount(Rabatt)
         expect(wrapper.vm.rabatt).toEqual(expectedData.DiscountCode)
     })
 })
@@ -33,7 +35,7 @@ describe('Credic Card', () =>{
       })
       test('kollar av kreditkorts info', () => {
         const wrapper = mount(BetAlt)
-        expect(wrapper.vm.fakturaData.creditcard).toBeTruthy(expectedData.CBetAlt)
+        expect(wrapper.vm.fakturaData.creditcard).toEqual(expectedData.CBetAlt)
         expect(wrapper.vm.kortData.firstName).toEqual(expectedData.CFirstnName)
         expect(wrapper.vm.kortData.lastname).toEqual(expectedData.CLastName)
         expect(wrapper.vm.kortData.adress).toEqual(expectedData.CAdress)
@@ -42,6 +44,7 @@ describe('Credic Card', () =>{
         expect(wrapper.vm.kortData.cardccv).toEqual(expectedData.CCardCCV)
       })
       test('kollar av rabattkod', () => {
+        const wrapper = mount(Rabatt)
         expect(wrapper.vm.rabatt).toEqual(expectedData.DiscountCode)
     })
 })
