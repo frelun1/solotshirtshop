@@ -1,5 +1,5 @@
 <template>
-  <div class="loggaConfig">
+  <div class="LoggaConfig">
   </div>
 </template>
 
