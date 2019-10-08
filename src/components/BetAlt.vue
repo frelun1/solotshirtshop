@@ -1,6 +1,5 @@
 <template>
   <div class="BetAlt">
-    <h1>test</h1>
   </div>
 </template>
 
@@ -10,17 +9,17 @@ export default {
   data() {
     return {
       fakturaData: {
-        fFirstname: "",
+        FFirstname: "",
 
-        fAdress: ''
+        FAdress: {}
       },
 
-      setFirstName(name) {
-        this.fakturaData.ffirstName = name;
+      setFFirstName(name) {
+        this.fakturaData.FFirstName = name;
       },
 
       setFAdress(adress) {
-        this.fakturaData.fAdress = adress;
+        this.fakturaData.FAdress = adress;
       }
     };
   }
