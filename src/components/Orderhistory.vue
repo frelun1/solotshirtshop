@@ -12,17 +12,19 @@ export default {
       
       orderHistory: {
         First:{ 
-        OrderNumber: '123456789',
+        OrderNumber: '',
 
-        firstName: "Ben",
+        firstName: '',
 
-        tShirt: 'This is a T-Shirt'
-        },
-       
+        tShirt: ''
+        }
+      
       },
-
       seOldOrder(Num) {
         this.orderHistory.First.OrderNumber = Num;
+      },
+      descOldOrder(desc){
+        this.orderHistory.First.tShirt = desc;
       },
     };
   }
