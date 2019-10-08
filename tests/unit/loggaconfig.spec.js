@@ -2,7 +2,7 @@ import { mount } from '@vue/test-utils'
 import loggaConfig from '@/components/loggaConfig.vue'
 
 
-// Det ska gå att välja förvald bild eller egen bild på T-shirten.
+// Det ska gå att välja förvald bild eller egen bild på T-shirten, samt ändra storleken på bilden. Storlek på bild kan tyckas vara kostnadsfråga?
 
 
 let expectedData={ LMyPic: 'MyPic', LPicSize: {Width: 'Width', Heigth: 'Height'}, 
