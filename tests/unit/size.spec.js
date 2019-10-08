@@ -17,6 +17,7 @@ describe('Size', () => {
     })*/
     test('default size', () => {
         const wrapper = mount(TShirtConfig)
+        wrapper.vm.setSize('S')
         expect(wrapper.vm.tShirt.size).toEqual('S')
     })
     test('change size', () => {
