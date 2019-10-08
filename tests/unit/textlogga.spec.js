@@ -1,65 +1,61 @@
 import { mount } from '@vue/test-utils'
 import TestLogga from '@/components/TestLogga.vue'
-import Rabatt from '@/components/Rabatt.vue'
 
 
 //Det skall finnas faktura- och kortbetalnings altenativ. När man väljer ett av altenativen kan man skriva in informationen som behövs för att slutföra betalningen för respektive betalnings altenativ
 //Samt rabattkod för rabatt
 
 
-let expectedData={ FBetAlt: 'Faktura', FFirstName: 'Clas', FLastName: 'Glas', FAdress: {Street: 'Solgatan 10', Zip: '22222', Town: 'Lund', Country: 'Sweden'}, 
-CBetAlt: 'CreditCard', CFirstnName: 'Kalle', CLastName: 'Galén', CAdress: 'Mångatan 5', CCardNumber: '1234 4567 8901 2345', CCardDate: '30/12', CCardCCV: '999', DiscountCode: 'Free123' }
+let expectedData={ TPreText: 'Text', TTextSize: 'Size', TTextColor: 'Color', TTextStyle: 'Style', TTextFont: 'Font', TMyText: 'MyText',  
+LMyPic: 'MyPic', LPicSize: {Width: 'Width', Heigth: 'Height'}, LPrePic: 'PrePic', LPrePicSize: {Width: 'Width', Heigth: 'Height'}}
 
-describe('Faktura', () =>{
-    test('laddar komponent', () => {
-        const wrapper = mount(BetAlt)
-        expect(wrapper.isVueInstance()).toBeTruthy()
-      })
-      test('kollar av faktura info', () => {
-        const wrapper = mount(BetAlt)
-        wrapper.vm.setFFirstName(expectedData.FFirstName)
-        expect(wrapper.vm.fakturaData.FFirstName).toEqual(expectedData.FFirstName)
+describe('Text', () =>{
+  test('Mount unit', () => {
+      const wrapper = mount(TextLogga)
+      expect(wrapper.isVueInstance()).toBeTruthy()
+    })
+    test('Testing text configs', () => {
+      const wrapper = mount(TextLogga)
+      wrapper.vm.setTPreText(expectedData.TPreText)
+      expect(wrapper.vm.textConfig.TPreText).toEqual(expectedData.TPreText)
 
-        wrapper.vm.setFAdress(expectedData.FAdress)
-        expect(wrapper.vm.fakturaData.FAdress).toEqual(expectedData.FAdress)
+      wrapper.vm.setTMyText(expectedData.TMyText)
+      expect(wrapper.vm.textConfig.TMyText).toEqual(expectedData.TMyText)
 
-        wrapper.vm.setFaktura(expectedData.Faktura)
-        expect(wrapper.vm.fakturaData.Faktura).toEqual(expectedData.FBetAlt)
+      wrapper.vm.setTTextSize(expectedData.TTextSize)
+      expect(wrapper.vm.textConfig.TTextSize).toEqual(expectedData.TTextSize)
 
-        wrapper.vm.setFLastName(expectedData.FLastName)
-        expect(wrapper.vm.fakturaData.FLastName).toEqual(expectedData.FLastName)
-      })
-      test('kollar av rabattkod', () => {
-        const wrapper = mount(Rabatt)
-        wrapper.vm.setFLastName(expectedData.DiscountCode)
-        expect(wrapper.vm.Rabatt).toEqual(expectedData.DiscountCode)
+      wrapper.vm.setTTextColor(expectedData.TTextColor)
+      expect(wrapper.vm.textConfig.TTextColor).toEqual(expectedData.TTextColor)
+
+      wrapper.vm.setTTextStyle(expectedData.TTextStyle)
+      expect(wrapper.vm.textConfig.TTextStyle).toEqual(expectedData.TTextStyle)
+
+      wrapper.vm.setTTextFont(expectedData.TTextFont)
+      expect(wrapper.vm.textConfig.TTextFont).toEqual(expectedData.TTextFont)
+
+      wrapper.vm.setTMyText(expectedData.TMyText)
+      expect(wrapper.vm.textConfig.TMyText).toEqual(expectedData.TMyText)
     })
 })
 
-describe('Credic Card', () =>{
-    test('laddar komponent', () => {
-        const wrapper = mount(BetAlt)
-        expect(wrapper.isVueInstance()).toBeTruthy()
-      })
-      test('kollar av kreditkorts info', () => {
-        const wrapper = mount(BetAlt)
+describe('Logga', () =>{
+  test('Mount unit', () => {
+      const wrapper = mount(TextLogga)
+      expect(wrapper.isVueInstance()).toBeTruthy()
+    })
+    test('Testing logga configs', () => {
+      const wrapper = mount(TextLogga)
+      wrapper.vm.setLMyPic(expectedData.LMyPic)
+      expect(wrapper.vm.loggaConfig.LMyPic).toEqual(expectedData.LMyPic)
 
-        expect(wrapper.vm.fakturaData.creditcard).toEqual(expectedData.CBetAlt)
-        
-        expect(wrapper.vm.kortData.firstName).toEqual(expectedData.CFirstnName)
+      wrapper.vm.setLPicSize(expectedData.LPicSize)
+      expect(wrapper.vm.loggaConfig.LPicSize).toEqual(expectedData.LPicSize)
 
-        expect(wrapper.vm.kortData.lastName).toEqual(expectedData.CLastName)
+      wrapper.vm.setLPrePic(expectedData.LPrePic)
+      expect(wrapper.vm.loggaConfig.LPrePic).toEqual(expectedData.LPrePic)
 
-        expect(wrapper.vm.kortData.adress).toEqual(expectedData.CAdress)
-
-        expect(wrapper.vm.kortData.cardNumber).toEqual(expectedData.CCardNumber)
-
-        expect(wrapper.vm.kortData.cardDate).toEqual(expectedData.CCardDate)
-
-        expect(wrapper.vm.kortData.cardCCV).toEqual(expectedData.CCardCCV)
-      })
-      test('kollar av rabattkod', () => {
-        const wrapper = mount(Rabatt)
-        expect(wrapper.vm.rabatt).toEqual(expectedData.DiscountCode)
+      wrapper.vm.setLPrePicSize(expectedData.LPrePicSize)
+      expect(wrapper.vm.loggaConfig.LPrePicSize).toEqual(expectedData.LPrePicSize)
     })
 })
