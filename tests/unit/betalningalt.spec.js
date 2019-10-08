@@ -23,12 +23,16 @@ describe('Faktura', () =>{
         wrapper.vm.setFAdress(expectedData.FAdress)
         expect(wrapper.vm.fakturaData.FAdress).toEqual(expectedData.FAdress)
 
-        expect(wrapper.vm.fakturaData.faktura).toEqual(expectedData.FBetAlt)
-        expect(wrapper.vm.fakturaData.lastName).toEqual(expectedData.FLastName)
+        wrapper.vm.setFaktura(expectedData.Faktura)
+        expect(wrapper.vm.fakturaData.Faktura).toEqual(expectedData.FBetAlt)
+
+        wrapper.vm.setFLastName(expectedData.FLastName)
+        expect(wrapper.vm.fakturaData.FLastName).toEqual(expectedData.FLastName)
       })
       test('kollar av rabattkod', () => {
         const wrapper = mount(Rabatt)
-        expect(wrapper.vm.rabatt).toEqual(expectedData.DiscountCode)
+        wrapper.vm.setFLastName(expectedData.DiscountCode)
+        expect(wrapper.vm.Rabatt).toEqual(expectedData.DiscountCode)
     })
 })
 
@@ -39,12 +43,19 @@ describe('Credic Card', () =>{
       })
       test('kollar av kreditkorts info', () => {
         const wrapper = mount(BetAlt)
+
         expect(wrapper.vm.fakturaData.creditcard).toEqual(expectedData.CBetAlt)
+        
         expect(wrapper.vm.kortData.firstName).toEqual(expectedData.CFirstnName)
+
         expect(wrapper.vm.kortData.lastName).toEqual(expectedData.CLastName)
+
         expect(wrapper.vm.kortData.adress).toEqual(expectedData.CAdress)
+
         expect(wrapper.vm.kortData.cardNumber).toEqual(expectedData.CCardNumber)
+
         expect(wrapper.vm.kortData.cardDate).toEqual(expectedData.CCardDate)
+
         expect(wrapper.vm.kortData.cardCCV).toEqual(expectedData.CCardCCV)
       })
       test('kollar av rabattkod', () => {
