@@ -30,6 +30,8 @@ describe('Order', () =>{
       })
     test('sending orderinformation', () => {
         const wrapper = mount(Order)
+        wrapper.vm.setFirstName(expectedData.CName)
+        wrapper.vm.setTShirt(expectedData.ShirtDesc)
         expect(wrapper.vm.orderData.firstName).toEqual(expectedData.CName)
         expect(wrapper.vm.orderData.tShirt).toEqual(expectedData.ShirtDesc)
         /*expect(wrapper.text()).toContain(expectedData.Payment)
@@ -51,12 +53,13 @@ describe('OrderHistory', () => {
       })
     test('se order history', () => {
         const wrapper = mount(OrderHistory)
+        wrapper.vm.seOldOrder(expectedData.OrderNumber)
         expect(wrapper.vm.orderHistory.First.OrderNumber).toEqual(expectedData.OrderNumber)
     })
     test('my T-Shirts', () => {
         const wrapper = mount(OrderHistory)
-        wrapper.vm.seOldOrder(expectedData.OrderNumber)
-        expect(wrapper.vm.orderHistory.First.OrderNumber).toEqual(expectedData.OrderNumber)
+        wrapper.vm.descOldOrder(expectedData.ShirtDesc)
+        expect(wrapper.vm.orderHistory.First.tShirt).toEqual(expectedData.ShirtDesc)
     })
 })
     
