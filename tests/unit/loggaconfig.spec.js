@@ -10,11 +10,11 @@ LPrePic: 'PrePic', LPrePicSize: {Width: 'Width', Heigth: 'Height'}}
 
 describe('Logga', () =>{
   test('Mount unit', () => {
-      const wrapper = mount(TextLogga)
+      const wrapper = mount(LoggaConfig)
       expect(wrapper.isVueInstance()).toBeTruthy()
     })
     test('Testing logga configs', () => {
-      const wrapper = mount(TextLogga)
+      const wrapper = mount(LoggaConfig)
       wrapper.vm.setLMyPic(expectedData.LMyPic)
       expect(wrapper.vm.loggaConfig.LMyPic).toEqual(expectedData.LMyPic)
 
