@@ -77,4 +77,4 @@ app.get('*', async (req, res) => {
 // servern startas
 app.listen(port, () => {
     console.log('server running on port ' + port);
-})
+});
