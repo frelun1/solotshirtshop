@@ -1,5 +1,5 @@
 <template>
-  <div class="BetAlt">
+  <div class="Rabatt">
   </div>
 </template>
 
@@ -8,19 +8,14 @@
 export default {
   data() {
     return {
-      fakturaData: {
-        fFirstname: "",
-
-        fAdress: ''
+      rabatt: {
+        DiscountCode: ''
       },
 
-      setFirstName(name) {
-        this.fakturaData.ffirstName = name;
-      },
-
-      setFAdress(adress) {
-        this.fakturaData.fAdress = adress;
+      setDiscountCode(rabatt) {
+        this.rabatt.DiscountCode = rabatt;
       }
+
     };
   }
 }
