@@ -9,7 +9,7 @@ import BetAltKredit from '@/components/BetAltKredit.vue'
 
 
 let expectedData={ FBetAlt: 'Faktura', FFirstName: 'Clas', FLastName: 'Glas', FAdress: {Street: 'Solgatan 10', Zip: '22222', Town: 'Lund', Country: 'Sweden'}, 
-CBetAlt: 'CreditCard', CFirstName: 'Kalle', CLastName: 'Galén', CAdress: 'Mångatan 5', CCardNumber: '1234 4567 8901 2345', CCardDate: '30/12', CCardCCV: '999', DiscountCode: 'Free123' }
+CBetAlt: 'CreditCard', CFirstName: 'Kalle', CLastName: 'Galén', CAdress: {Street: 'Mångatan 5', Zip: '55555', Town: 'Lund', Country: 'Sweden' }, CCardNumber: '1234 4567 8901 2345', CCardDate: '30/12', CCardCCV: '999', DiscountCode: 'Free123' }
 
 describe('Faktura', () =>{
     test('laddar komponent', () => {
