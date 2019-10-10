@@ -325,7 +325,7 @@ let api = [
                   method: 'post',
                   url: '/rest/discount',
                   body:{
-                    DiscountCode; String
+                    DiscountCode: String
                   }
                 },
                 response:{

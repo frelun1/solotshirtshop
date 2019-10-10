@@ -130,7 +130,9 @@
           <footer class="card-footer">
             <p class="card-footer-item">
               <span>
-                <router-link :to="{ name: 'design', params: {designId: 'model-6' } }"><button class="button is-link">Skapa din egen</button></router-link>
+                <router-link :to="{ name: 'design', params: {designId: 'model-6' } }">
+                <button class="button is-link">Skapa din egen</button>
+                </router-link>
               </span>
             </p>
           </footer>
@@ -138,6 +140,7 @@
       </div>
     </div>
   </div>
+
 </template>
 
 

@@ -44,7 +44,7 @@ describe('Rabatt', () =>{
     })
   })
 
-describe('Credic Card', () =>{
+describe('Credit Card', () =>{
     test('laddar komponent', () => {
         const wrapper = mount(BetAltKredit)
         expect(wrapper.isVueInstance()).toBeTruthy()

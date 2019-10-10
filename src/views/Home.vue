@@ -2,10 +2,14 @@
   <div class="home">
     <Webshop /> 
 
-    <img alt="Vue logo" src="https://nummerlappar.se/wp-content/uploads/2017/05/All-about-T-Shirt.jpg" style="height: 100px;">
-    <HelloWorld msg="Welcome to TnT T-Shirt shop!"/>
+    <img alt="Vue logo" src="https://omfgdogs.com/omfgdogs@2X.gif" style="height: 100px;">
+    <HelloWorld msg="TnT T-Shirt Shop!"/>
+
+    <video controls="" autoplay="" src="https://omfgdogs.com/omfgdogs.mp3" type="audio/mp3" style="height: 50px;"></video>
+
   </div>
 </template>
+
 
 <script>
 // @ is an alias to /src
