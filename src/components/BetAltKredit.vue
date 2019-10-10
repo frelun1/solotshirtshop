@@ -16,7 +16,6 @@ export default {
         CCardNumber: '',
         CCardCCV: '',
         CCardDate: '',
-
       },
 
       setCFirstName(firstName) {

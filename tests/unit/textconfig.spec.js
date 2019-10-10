@@ -10,7 +10,7 @@ import TextConfig from '@/components/TextConfig.vue'
 let expectedData={ TPreText: 'Text', TTextSize: {Width: 'Width', Heigth: 'Height'}, TTextColor: 'Color', TTextStyle: 'Style', TTextFont: 'Font', TMyText: 'MyText'}
 
 describe('Tshirt Text', () =>{
-    test('Mount unit', () => {
+    test('Mount component', () => {
         const wrapper = mount(TextConfig)
         expect(wrapper.isVueInstance()).toBeTruthy()
       })
@@ -33,8 +33,5 @@ describe('Tshirt Text', () =>{
 
         wrapper.vm.setTTextFont(expectedData.TTextFont)
         expect(wrapper.vm.textConfig.TTextFont).toEqual(expectedData.TTextFont)
-
-        wrapper.vm.setTMyText(expectedData.TMyText)
-        expect(wrapper.vm.textConfig.TMyText).toEqual(expectedData.TMyText)
         })
 })
