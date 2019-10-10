@@ -111,4 +111,255 @@ let api = [
         }
       }
     }
+      {
+    description: 'Get one faktura using its id',
+    request:{
+      method: 'get',
+      url: '/rest/faktura/:id',
+      params: ['id']
+    },
+    response:{
+      content:{
+        id: Number,
+        FFirstname: String,
+        FLastName: String,
+        FBetAlt: String,
+        FAdress: {String, Number, String, String}
+      }
+    },
+    {
+        description: 'Get all faktura',
+        request:{
+          method: 'get',
+          url: '/rest/faktura'
+        },
+        response:{
+          content:[
+            {
+            id: Number,
+            FFirstname: String,
+            FLastName: String,
+            FBetAlt: String,
+            FAdress: {String, Number, String, String}
+            }
+        ]
+        }
+      },
+      {
+        description: 'Create one faktura',
+        request:{
+          method: 'post',
+          url: '/rest/faktura',
+          body:{
+            FFirstname: String,
+            FLastName: String,
+            FBetAlt: String,
+            FAdress: {String, Number, String, String}
+          }
+        },
+        response:{
+          statusCode: Number,
+          error: Object
+        }
+      },
+      {
+        description: 'Create one faktura',
+        request:{
+          method: 'put',
+          url: '/rest/faktura/:id',
+          params: ['id']
+          body:{
+            FFirstname: String,
+            FLastName: String,
+            FBetAlt: String,
+            FAdress: {String, Number, String, String}
+          }
+        },
+    
+        response:{
+          statusCode: Number,
+          error: Object
+        }
+      },
+      {
+        description: 'Delete one faktura using its id',
+        request:{
+          method: 'delete',
+          url: '/rest/faktura/:id',
+          params: ['id']
+        },
+        response:{
+          statusCode: Number,
+          error: Object
+        }
+      }
+
+
+      {
+        description: 'Get card information using its id',
+        request:{
+          method: 'get',
+          url: '/rest/card/:id',
+          params: ['id']
+        },
+        response:{
+          content:{
+            id: Number,
+            CFirstname: String,
+            CLastName: String,
+            CBetAlt: String,
+            CAdress: {String, Number, String, String},
+            CCardNumber: Number,
+            CCardCCV: Number,
+            CCardDate: Number,
+          }
+        },
+        {
+            description: 'Get all card information',
+            request:{
+              method: 'get',
+              url: '/rest/card'
+            },
+            response:{
+              content:[
+                {
+                id: Number,
+                CFirstname: String,
+                CLastName: String,
+                CBetAlt: String,
+                CAdress: {String, Number, String, String},
+                CCardNumber: Number,
+                CCardCCV: Number,
+                CCardDate: Number,
+                }
+            ]
+            }
+          },
+          {
+            description: 'Create card information',
+            request:{
+              method: 'post',
+              url: '/rest/card',
+              body:{
+                id: Number,
+                CFirstname: String,
+                CLastName: String,
+                CBetAlt: String,
+                CAdress: {String, Number, String, String},
+                CCardNumber: Number,
+                CCardCCV: Number,
+                CCardDate: Number,
+              }
+            },
+            response:{
+              statusCode: Number,
+              error: Object
+            }
+          },
+          {
+            description: 'Create card information',
+            request:{
+              method: 'put',
+              url: '/rest/card/:id',
+              params: ['id']
+              body:{
+                CFirstname: String,
+                CLastName: String,
+                CBetAlt: String,
+                CAdress: {String, Number, String, String},
+                CCardNumber: Number,
+                CCardCCV: Number,
+                CCardDate: Number,
+              }
+            },
+        
+            response:{
+              statusCode: Number,
+              error: Object
+            }
+          },
+          {
+            description: 'Delete card information using its id',
+            request:{
+              method: 'delete',
+              url: '/rest/card/:id',
+              params: ['id']
+            },
+            response:{
+              statusCode: Number,
+              error: Object
+            }
+          }
+
+          {
+            description: 'Get discount code using its id',
+            request:{
+              method: 'get',
+              url: '/rest/discount/:id',
+              params: ['id']
+            },
+            response:{
+              content:{
+                id: Number,
+                DiscountCode: String
+              }
+            },
+            {
+                description: 'Get all discount codes',
+                request:{
+                  method: 'get',
+                  url: '/rest/discount'
+                },
+                response:{
+                  content:[
+                    {
+                    id: Number,
+                    DiscountCode: String
+                    }
+                ]
+                }
+              },
+              {
+                description: 'Create discount code',
+                request:{
+                  method: 'post',
+                  url: '/rest/discount',
+                  body:{
+                    DiscountCode; String
+                  }
+                },
+                response:{
+                  statusCode: Number,
+                  error: Object
+                }
+              },
+              {
+                description: 'Create Discount code',
+                request:{
+                  method: 'put',
+                  url: '/rest/discount/:id',
+                  params: ['id']
+                  body:{
+                    DiscountCode: String
+                  }
+                },
+            
+                response:{
+                  statusCode: Number,
+                  error: Object
+                }
+              },
+              {
+                description: 'Delete discount code using its id',
+                request:{
+                  method: 'delete',
+                  url: '/rest/discount/:id',
+                  params: ['id']
+                },
+                response:{
+                  statusCode: Number,
+                  error: Object
+                }
+              }
+
     ]
