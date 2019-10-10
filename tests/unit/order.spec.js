@@ -32,17 +32,30 @@ describe('Order', () =>{
         const wrapper = mount(Order)
         wrapper.vm.setFirstName(expectedData.CName)
         wrapper.vm.setTShirt(expectedData.ShirtDesc)
-        expect(wrapper.vm.orderData.firstName).toEqual(expectedData.CName)
-        expect(wrapper.vm.orderData.tShirt).toEqual(expectedData.ShirtDesc)
-        /*expect(wrapper.text()).toContain(expectedData.Payment)
-        expect(wrapper.text()).toContain(expectedData.Price)
-        expect(wrapper.text()).toContain(expectedData.OrderNumber)
-        expect(wrapper.text()).toContain(expectedData.OrderDate)
-        expect(wrapper.text()).toContain(expectedData.Delivery)
-        expect(wrapper.text()).toContain(expectedData.CNumber)
+        wrapper.vm.setOrderNumber(expectedData.OrderNumber)
+        wrapper.vm.setCAdress(expectedData.CAdress.street,expectedData.CAdress.zip,expectedData.CAdress.city,expectedData.CAdress.Country)
+        wrapper.vm.setPayment(expectedData.Payment)
+        wrapper.vm.setPrice(expectedData.Price)
+        wrapper.vm.setOrderDate(expectedData.OrderDate)
+        wrapper.vm.setDelivery(expectedData.Delivery)
+        wrapper.vm.setCNumber(expectedData.CNumber)
         if(expectedData.Delivery == 'Utlämningsställe'){
-            expect(wrapper.text()).toContain(expectedData.UName, expectedData.UAdress)
-        }*/
+            wrapper.vm.setUName(expectedData.UName)
+            wrapper.vm.setUAdress(expectedData.UAdress.street,expectedData.UAdress.zip,expectedData.UAdress.city,expectedData.UAdress.Country)
+        }
+        expect(wrapper.vm.orderData.CName).toEqual(expectedData.CName)
+        expect(wrapper.vm.orderData.CAdress).toEqual(expectedData.CAdress)
+        expect(wrapper.vm.orderData.tShirt).toEqual(expectedData.ShirtDesc)
+        expect(wrapper.vm.orderData.OrderNumber).toEqual(expectedData.OrderNumber)
+        expect(wrapper.vm.orderData.Payment).toEqual(expectedData.Payment)
+        expect(wrapper.vm.orderData.Price).toEqual(expectedData.Price)
+        expect(wrapper.vm.orderData.OrderDate).toEqual(expectedData.OrderDate)
+        expect(wrapper.vm.orderData.Delivery).toEqual(expectedData.Delivery)
+        expect(wrapper.vm.orderData.CNumber).toEqual(expectedData.CNumber)
+        if(expectedData.Delivery == 'Utlämningsställe'){
+            expect(wrapper.vm.orderData.UName).toEqual(expectedData.UName)
+            expect(wrapper.vm.orderData.UAdress).toEqual(expectedData.UAdress)
+        }
     })
 })
 
@@ -56,7 +69,7 @@ describe('OrderHistory', () => {
         wrapper.vm.seOldOrder(expectedData.OrderNumber)
         expect(wrapper.vm.orderHistory.First.OrderNumber).toEqual(expectedData.OrderNumber)
     })
-    test('my T-Shirts', () => {
+    test('my T-Shirt', () => {
         const wrapper = mount(OrderHistory)
         wrapper.vm.descOldOrder(expectedData.ShirtDesc)
         expect(wrapper.vm.orderHistory.First.tShirt).toEqual(expectedData.ShirtDesc)

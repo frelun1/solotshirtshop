@@ -31,3 +31,84 @@ paths:
                 type: array
                 items: 
                   type: string
+
+let api = [
+    {
+      description: 'my T-Shirt',
+      request:{
+        method: 'get',
+        url: '/components/Orderhistory/:OrderNumber',
+      },
+      response:{
+        content:{
+          OrderNumber: Number,
+          firstName: String,
+          TShirt: String
+        }
+      }
+    },
+    {
+      description: 'se order history',
+      request:{
+        method: 'get',
+        url: '/components/Orderhistory/:OrderNumber',
+        params: ['OrderNumber']
+      },
+      response:{
+        content:{
+          OrderNumber: Number,
+          firstName: String,
+          TShirt: String
+        }
+      }
+    },
+    {
+      description: 'sending orderinformation',
+      request:{
+        method: 'post',
+        url: '/components/Order',
+        body:{
+          OrderNumber: Number,
+          CName: String,
+          TShirt: String,
+          CLastName: String,
+          CAdress: {
+            street: String,
+            zip: String,
+            city: String,
+            Country: String,
+          },
+          Payment: String,
+          Price: Number,
+          OrderDate: Date,
+          Delivery: String,
+          CNumber: String,
+          UName: String,
+          UAdress: {
+            street: String,
+            zip: String,
+            city: String,
+            Country: String
+          },
+
+        }
+      },
+      response:{
+        statusCode: Number,
+        error: Object
+      }
+    },
+    {
+      description: 'change size',
+      request:{
+        method: 'get',
+        url: '/components/TShirtConfig/:setSizes',
+        params: ['size']
+      },
+      response:{
+        content:{
+          size: String
+        }
+      }
+    }
+    ]

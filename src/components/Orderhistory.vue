@@ -13,9 +13,26 @@ export default {
       orderHistory: {
         First:{ 
         OrderNumber: '',
-
-        firstName: '',
-
+        CName: '',
+        CLastName: '',
+        CAdress: {
+          street: '',
+          zip: '',
+          city: '',
+          Country:'',
+        },
+        Payment: '',
+        Price: '',
+        OrderDate: '',
+        Delivery: '',
+        CNumber: '',
+        UName: '',
+        UAdress:{
+          street: '',
+          zip: '',
+          city: '',
+          Country:'',
+        },
         tShirt: ''
         }
       
