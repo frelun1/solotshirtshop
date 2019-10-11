@@ -359,7 +359,94 @@ let api = [
                 response:{
                   statusCode: Number,
                   error: Object
+                  }
+                },
+                {
+                description: 'Get a premade text using its id',
+                request:{
+                  method: 'get',
+                  url: '/rest/tpretext/:id',
+                  body:{
+                  id: Number,
+                  TPreText: String
                 }
-              }
-
-    ]
+              },
+                response:{
+                  statusCode: Number,
+                  error: Object
+                }
+              },
+              {
+                description: 'Get a color using its id',
+                request:{
+                  method: 'get',
+                  url: '/rest/ttextcolor/:id',
+                  body:{
+                  id: Number,
+                  TTextColor: String
+                }
+              },
+                response:{
+                  statusCode: Number,
+                  error: Object
+                }
+              },
+              {
+                description: 'Get a text font using its id',
+                request:{
+                  method: 'get',
+                  url: '/rest/ttextfont/:id',
+                  body:{
+                  id: Number,
+                  TTextFont: String
+                }
+              },
+                response:{
+                  statusCode: Number,
+                  error: Object
+                }
+              },
+              {
+                description: 'Get a text style using its id',
+                request:{
+                  method: 'get',
+                  url: '/rest/ttextstyle/:id',
+                  body:{
+                  id: Number,
+                  TTextStyle: String
+                }
+              },
+                response:{
+                  statusCode: Number,
+                  error: Object
+                }
+              },
+              {
+                description: 'Get the text size using its id',
+                request:{
+                  method: 'get',
+                  url: '/rest/ttextsize/:id',
+                  body:{
+                  id: Number,
+                  TTextSize: Number
+                }
+              },
+                response:{
+                  statusCode: Number,
+                  error: Object
+                }
+              },
+              {
+                description: 'Get the self written text',
+                request:{
+                  method: 'get',
+                  url: '/rest/mytext',
+                  body:{
+                  TMyText: String
+                }
+              },
+                response:{
+                  statusCode: Number,
+                  error: Object
+                }
+  ]

@@ -16,8 +16,8 @@ export default {
         TTextFont: "",
         TMyText: "",
       },
-      setTPreText(text) {
-        this.textConfig.TPreText = text;
+      setTPreText(pretext) {
+        this.textConfig.TPreText = pretext;
       },
       setTTextSize(size) {
         this.textConfig.TTextSize = size;
