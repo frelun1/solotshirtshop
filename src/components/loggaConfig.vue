@@ -13,7 +13,7 @@ export default {
 
         LPicSize: {},
 
-        LPrePic: "PIC URL",
+        LPrePic: "PIC URL/id",
 
         LPrePicSize: {},
 

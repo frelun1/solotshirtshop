@@ -2,7 +2,8 @@ import { mount } from '@vue/test-utils'
 import LoggaConfig from '@/components/LoggaConfig.vue'
 
 
-// Det ska gå att välja förvald bild eller egen bild på T-shirten, samt ändra storleken på bilden. 
+// Det ska gå att välja förvald bild eller egen bild på T-shirten, samt ändra storleken på bilden.
+// Val av storlek på bilden är förinställda storlekar (width/heigth) 
 // (Storlek på bild en kostnadsfråga?)
 
 

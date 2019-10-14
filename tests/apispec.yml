@@ -110,8 +110,8 @@ let api = [
           size: String
         }
       }
-    }
-      {
+    },
+    {
     description: 'Get one faktura using its id',
     request:{
       method: 'get',
@@ -126,6 +126,7 @@ let api = [
         FBetAlt: String,
         FAdress: {String, Number, String, String}
       }
+    }
     },
     {
         description: 'Get all faktura',
@@ -134,7 +135,7 @@ let api = [
           url: '/rest/faktura'
         },
         response:{
-          content:[
+          content:{
             {
             id: Number,
             FFirstname: String,
@@ -142,7 +143,7 @@ let api = [
             FBetAlt: String,
             FAdress: {String, Number, String, String}
             }
-        ]
+          }
         }
       },
       {
@@ -192,7 +193,7 @@ let api = [
           statusCode: Number,
           error: Object
         }
-      }
+      },
 
 
       {
@@ -213,7 +214,8 @@ let api = [
             CCardCCV: Number,
             CCardDate: Number,
           }
-        },
+        }
+      },
         {
             description: 'Get all card information',
             request:{
@@ -232,7 +234,7 @@ let api = [
                 CCardCCV: Number,
                 CCardDate: Number,
                 }
-            ]
+              ]
             }
           },
           {
@@ -289,7 +291,7 @@ let api = [
               statusCode: Number,
               error: Object
             }
-          }
+          },
 
           {
             description: 'Get discount code using its id',
@@ -303,8 +305,9 @@ let api = [
                 id: Number,
                 DiscountCode: String
               }
-            },
-            {
+            }
+          },
+              {
                 description: 'Get all discount codes',
                 request:{
                   method: 'get',
@@ -361,19 +364,15 @@ let api = [
                   error: Object
                   }
                 },
+
                 {
                 description: 'Get a premade text using its id',
                 request:{
                   method: 'get',
                   url: '/rest/tpretext/:id',
-                  body:{
+                  content:{
                   id: Number,
                   TPreText: String
-                }
-              },
-                response:{
-                  statusCode: Number,
-                  error: Object
                 }
               },
               {
@@ -381,14 +380,9 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/ttextcolor/:id',
-                  body:{
+                  content:{
                   id: Number,
                   TTextColor: String
-                }
-              },
-                response:{
-                  statusCode: Number,
-                  error: Object
                 }
               },
               {
@@ -396,14 +390,9 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/ttextfont/:id',
-                  body:{
+                  content:{
                   id: Number,
                   TTextFont: String
-                }
-              },
-                response:{
-                  statusCode: Number,
-                  error: Object
                 }
               },
               {
@@ -411,14 +400,9 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/ttextstyle/:id',
-                  body:{
+                  content:{
                   id: Number,
                   TTextStyle: String
-                }
-              },
-                response:{
-                  statusCode: Number,
-                  error: Object
                 }
               },
               {
@@ -426,14 +410,9 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/ttextsize/:id',
-                  body:{
+                  content:{
                   id: Number,
                   TTextSize: Number
-                }
-              },
-                response:{
-                  statusCode: Number,
-                  error: Object
                 }
               },
               {
@@ -441,12 +420,85 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/mytext',
-                  body:{
+                  content:{
                   TMyText: String
                 }
               },
+                {
+                description: 'Create self written text',
+                request:{
+                method: 'post',
+                url: '/rest/mytext',
+                body:{
+                TMyText: String
+              }
+            },
                 response:{
-                  statusCode: Number,
-                  error: Object
+                statusCode: Number,
+                error: Object
+            }
+          },
+            {
+              description: 'Create self written text',
+              request:{
+              method: 'put',
+              url: '/rest/mytext/:id',
+               params: ['id']
+              body:{
+              TMyText: String
+            }
+          },
+              response:{
+                statusCode: Number,
+                error: Object
+            },
+
+              {
+                description: 'Get My Pic using its id',
+                request:{
+                  method: 'get',
+                  url: '/rest/lmypic/:id',
+                  params: ['id']
+                },
+                response:{
+                  content:{
+                    LMyPic: Number
+                  }
                 }
+              },
+              {
+                description: 'Get My Pic Size using its id',
+                request:{
+                  method: 'get',
+                  url: '/rest/lmypic/:id',
+                  params: ['id']
+                },
+                response:{
+                  content:{
+                    LMyPicSize: Number
+                  }
+                }
+              },
+
+              {
+        description: 'Get card information using its id',
+        request:{
+          method: 'get',
+          url: '/rest/card/:id',
+          params: ['id']
+        },
+        response:{
+          content:{
+            id: Number,
+            CFirstname: String,
+            CLastName: String,
+            CBetAlt: String,
+            CAdress: {String, Number, String, String},
+            CCardNumber: Number,
+            CCardCCV: Number,
+            CCardDate: Number,
+          }
+        }
+      },
+  
   ]

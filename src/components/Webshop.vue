@@ -1,6 +1,6 @@
 <template>
   <div class="webshopComponent">
-    <h1>webshop</h1>
+    <h1>TnT Webshop</h1>
     <div class="columns">
       <div class="column">
         <div class="card">
