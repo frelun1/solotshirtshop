@@ -2,7 +2,7 @@
   <div class="design">
     <h1>▼</h1>
     <h1>▼</h1>
-    <h1><b><p style="color:red"> Detta är designa t-shirt sidan </p></b></h1>
+    <h1><b><p style="color:red"> ~ Detta är designa t-shirt sidan ~ </p></b></h1>
     <h1>▼</h1>
     <h1>▼</h1>
     <h1>▼</h1>

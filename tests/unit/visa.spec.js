@@ -28,7 +28,7 @@ describe('Som kund vill jag kunna se hur min t-shirt kommer att se ut under tide
         const loggawrapper = mount(LoggaConfig)
         loggawrapper.vm.setLMyPic("PIC URL")
         loggawrapper.vm.setLPicSize({})
-        loggawrapper.vm.setLPrePic("PIC URL")
+        loggawrapper.vm.setLPrePic("PIC URL/id")
         loggawrapper.vm.setLPrePicSize({})
     })
     test('custom tshirt', () => {
