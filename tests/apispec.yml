@@ -366,14 +366,9 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/tpretext/:id',
-                  body:{
+                  content:{
                   id: Number,
                   TPreText: String
-                }
-              },
-                response:{
-                  statusCode: Number,
-                  error: Object
                 }
               },
               {
@@ -381,14 +376,9 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/ttextcolor/:id',
-                  body:{
+                  content:{
                   id: Number,
                   TTextColor: String
-                }
-              },
-                response:{
-                  statusCode: Number,
-                  error: Object
                 }
               },
               {
@@ -396,14 +386,9 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/ttextfont/:id',
-                  body:{
+                  content:{
                   id: Number,
                   TTextFont: String
-                }
-              },
-                response:{
-                  statusCode: Number,
-                  error: Object
                 }
               },
               {
@@ -411,14 +396,9 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/ttextstyle/:id',
-                  body:{
+                  content:{
                   id: Number,
                   TTextStyle: String
-                }
-              },
-                response:{
-                  statusCode: Number,
-                  error: Object
                 }
               },
               {
@@ -426,14 +406,9 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/ttextsize/:id',
-                  body:{
+                  content:{
                   id: Number,
                   TTextSize: Number
-                }
-              },
-                response:{
-                  statusCode: Number,
-                  error: Object
                 }
               },
               {
@@ -441,12 +416,45 @@ let api = [
                 request:{
                   method: 'get',
                   url: '/rest/mytext',
-                  body:{
+                  content:{
                   TMyText: String
                 }
               },
+                {
+                description: 'Create self written text',
+                request:{
+                method: 'post',
+                url: '/rest/mytext',
+                body:{
+                TMyText: String
+              }
+            },
                 response:{
-                  statusCode: Number,
-                  error: Object
+                statusCode: Number,
+                error: Object
+            }
+          },
+            {
+              description: 'Create self written text',
+              request:{
+              method: 'put',
+              url: '/rest/mytext/:id',
+               params: ['id']
+              body:{
+              TMyText: String
+            }
+          },
+              response:{
+                statusCode: Number,
+                error: Object
+            }
+              {
+                description: 'Get the self written text',
+                request:{
+                  method: 'get',
+                  url: '/rest/mytext',
+                  content:{
+                  TMyText: String
                 }
-  ]
+  
+  ]     
