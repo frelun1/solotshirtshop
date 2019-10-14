@@ -10,7 +10,7 @@
           <div class="card-content">
             <img
               alt="Vue logo"
-              src="https://nummerlappar.se/wp-content/uploads/2017/05/All-about-T-Shirt.jpg"
+              src="https://images-ext-2.discordapp.net/external/ZN2gvOQVe6Ou8TpVGWDCYhAh-LKp_uNut51qLvKpUNw/%3Fw%3D1024%26h%3D1024/https/i.rocdn.com/v2/17138511"
               style="height: 100px;"
             />
           </div>
@@ -33,7 +33,7 @@
           <div class="card-content">
             <img
               alt="Vue logo"
-              src="https://nummerlappar.se/wp-content/uploads/2017/05/All-about-T-Shirt.jpg"
+              src="https://yeyvibe.com/wp-content/uploads/2019/04/Dabbing-Rainbow-Unicorn-T-Shirt.png"
               style="height: 100px;"
             />
           </div>
@@ -56,7 +56,7 @@
           <div class="card-content">
             <img
               alt="Vue logo"
-              src="https://nummerlappar.se/wp-content/uploads/2017/05/All-about-T-Shirt.jpg"
+              src="https://images-ext-2.discordapp.net/external/ZN2gvOQVe6Ou8TpVGWDCYhAh-LKp_uNut51qLvKpUNw/%3Fw%3D1024%26h%3D1024/https/i.rocdn.com/v2/17138511"
               style="height: 100px;"
             />
           </div>
@@ -81,7 +81,7 @@
           <div class="card-content">
             <img
               alt="Vue logo"
-              src="https://nummerlappar.se/wp-content/uploads/2017/05/All-about-T-Shirt.jpg"
+              src="https://yeyvibe.com/wp-content/uploads/2019/04/Dabbing-Rainbow-Unicorn-T-Shirt.png"
               style="height: 100px;"
             />
           </div>
@@ -102,7 +102,7 @@
           <div class="card-content">
             <img
               alt="Vue logo"
-              src="https://nummerlappar.se/wp-content/uploads/2017/05/All-about-T-Shirt.jpg"
+              src="https://images-ext-2.discordapp.net/external/ZN2gvOQVe6Ou8TpVGWDCYhAh-LKp_uNut51qLvKpUNw/%3Fw%3D1024%26h%3D1024/https/i.rocdn.com/v2/17138511"
               style="height: 100px;"
             />
           </div>
@@ -123,7 +123,7 @@
           <div class="card-content">
             <img
               alt="Vue logo"
-              src="https://nummerlappar.se/wp-content/uploads/2017/05/All-about-T-Shirt.jpg"
+              src="https://yeyvibe.com/wp-content/uploads/2019/04/Dabbing-Rainbow-Unicorn-T-Shirt.png"
               style="height: 100px;"
             />
           </div>
