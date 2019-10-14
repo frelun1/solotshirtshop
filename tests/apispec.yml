@@ -433,6 +433,7 @@ let api = [
                 TMyText: String
               }
             },
+<<<<<<< HEAD
                 response:{
                 statusCode: Number,
                 error: Object
@@ -502,3 +503,34 @@ let api = [
       },
   
   ]
+=======
+                response:{
+                statusCode: Number,
+                error: Object
+            }
+          },
+            {
+              description: 'Create self written text',
+              request:{
+              method: 'put',
+              url: '/rest/mytext/:id',
+               params: ['id']
+              body:{
+              TMyText: String
+            }
+          },
+              response:{
+                statusCode: Number,
+                error: Object
+            }
+              {
+                description: 'Get the self written text',
+                request:{
+                  method: 'get',
+                  url: '/rest/mytext',
+                  content:{
+                  TMyText: String
+                }
+  
+  ]     
+>>>>>>> c86caa5d789258b7849039275a9a4769a616c31d
