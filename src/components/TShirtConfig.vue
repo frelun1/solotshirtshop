@@ -11,7 +11,10 @@ export default {
     return {
       tShirt: {
         size: 'S',
-        farg: 'Vit'
+        farg: 'Vit',
+        side: '',
+        fabric: '',
+        modell:''
       },
 
       setSize(size) {
@@ -19,6 +22,15 @@ export default {
       },
       setFarg(farg){
         this.tShirt.farg = farg;
+      },
+      setSide(Side){
+        this.tShirt.side = Side;
+      },
+      setFabric(Fabric){
+        this.tShirt.fabric = Fabric;
+      },
+      setModell(Modell){
+        this.tShirt.modell = Modell;
       }
     };
   }

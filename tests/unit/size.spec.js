@@ -5,16 +5,11 @@ import TShirtConfig from '@/components/TShirtConfig.vue'
 // Storlekarna som skall finnas är S-XXL
 // S ska vara default
 
-//let t=['S','M','L','XL','XXL']
 describe('Size', () => {
     test('is a Vue instance', () => {
         const wrapper = mount(TShirtConfig)
         expect(wrapper.isVueInstance()).toBeTruthy()
       })
-    /*test('all sizes exist', () => {
-        
-        expect([t].sort()).toEqual(["Sizes"].sort())
-    })*/
     test('default size', () => {
         const wrapper = mount(TShirtConfig)
         wrapper.vm.setSize('S')

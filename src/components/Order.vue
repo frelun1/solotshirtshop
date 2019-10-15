@@ -31,7 +31,8 @@ export default {
           city: '',
           Country:'',
         },
-        tShirt: ''
+        tShirt: '',
+        numberOf: ''
       },
 
       setFirstName(name) {
@@ -77,6 +78,9 @@ export default {
         this.orderData.UAdress.city = city;
         this.orderData.UAdress.Country = Country;
       },
+      setNumberOf(Num){
+        this.orderData.numberOf = Num;
+      }
 
     };
   }
