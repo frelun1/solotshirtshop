@@ -1,6 +1,6 @@
 // Note: Using assert test syntax
 module.exports = ({ assert, response, store }) => ({
-  path: 'ordered_tshirt',
+  path: 'tshirt',
   method: 'get',
   test() {
    // Check that there are no tshirts in DB
@@ -8,6 +8,6 @@ module.exports = ({ assert, response, store }) => ({
   },
   setup() {
     // Store the mocktshirts in the db (setup for next step/query)
-    store.mockOrdered_tshirt = require('./mock-ordered_tshirt.json');
+    store.mockTshirt = require('./mock-tshirt.json');
   }
 });
