@@ -2,7 +2,7 @@
 module.exports = ({ response, store, repeat, i }) => ({
   path: 'tshirt',
   method: 'post',
-  body: store.mockTshirt[i],
+  body: store.mockTshirt = require('./mock-tshirt.json'),
   test() {
     // check that a row was inserted in the db
     response.affectedRows.should.equal(1);
