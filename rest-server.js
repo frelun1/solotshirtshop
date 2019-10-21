@@ -15,7 +15,8 @@ const db = mysql.createConnection({
   host     : 'localhost',
   user     : 'root',
   password : '',
-  database : 'testdatabas'
+  database : 'testdatabas',
+  port     : 3307
   //database : 'tshirt'
 });
 // gör om metoderna connect och query till promise-metoder, så vi kan använda async / await
