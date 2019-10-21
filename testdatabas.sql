@@ -34,7 +34,7 @@ CREATE TABLE IF NOT EXISTS `tshirt` (
   `model` varchar(50) DEFAULT NULL,
   `material` varchar(50) DEFAULT NULL,
   `print` varchar(50) DEFAULT NULL,
-  `price` varchar(50) DEFAULT NULL
+  `price` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
